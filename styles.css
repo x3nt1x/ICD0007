@@ -1,0 +1,142 @@
+html {
+    font-family: Verdana, sans-serif;
+    color: white;
+    background-color: #171717;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 60rem;
+    min-height: 100vh;
+    margin: auto;
+    background-color: #343434;
+}
+
+a {
+    color: white;
+}
+
+nav {
+    background-color: #252525;
+    border-bottom: 1px solid #646464;
+}
+
+nav a {
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 3rem;
+    line-height: 4.5rem;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #2589ff
+}
+
+main {
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    min-height: 100%;
+}
+
+#error-block {
+    padding: 0.3rem;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    margin: auto auto 1rem;
+    text-align: center;
+    background-color: #820000;
+}
+
+#message-block {
+    padding: 0.3rem;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    margin: auto auto 1rem;
+    text-align: center;
+    background-color: #006400;
+}
+
+form {
+    max-width: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label {
+    width: 8rem;
+    line-height: 1.9rem;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.input {
+    line-height: 1.9rem;
+}
+
+select {
+    padding: 0.3rem;
+    width: 13rem;
+    color: white;
+    border: 1px solid black;
+    background-color: #505050;
+    border-radius: 0.25rem;
+}
+
+#pealkiri, #eesnimi, #perkonnanimi {
+    padding: 0.3rem;
+    width: 12.3rem;
+    color: white;
+    border: 1px solid black;
+    background-color: #505050;
+    border-radius: 0.25rem;
+}
+
+.button {
+    width: 100%;
+    padding-right: 5rem;
+    text-align: right;
+    margin: auto;
+}
+
+.button > input {
+    color: white;
+    background-color: #0064cb;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+#delete {
+    background-color: #820000;
+}
+
+#radio {
+    padding-right: 0.35rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 2rem;
+}
+
+th {
+    border-bottom: 1px solid #646464;
+}
+
+th span {
+    float: left;
+}
+
+footer {
+    margin-top: auto;
+    padding-left: 3rem;
+    line-height: 1.5rem;
+    border-top: 1px solid #646464;
+}

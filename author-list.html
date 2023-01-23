@@ -1,0 +1,21 @@
+<div tpl-if="$message" id='message-block'>
+  {{ $message }}
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <th><span>Eesnimi</span></th>
+    <th><span>Perkonnanimi</span></th>
+    <th><span>Hinne</span></th>
+  </tr>
+  </thead>
+
+  <tpl tpl-foreach="$authors as $author">
+    <tr>
+      <td><a href='?cmd=author-add&id={{ $author->id }}'>{{ $author->firstName }}</a></td>
+      <td>{{ $author->lastName }}</td>
+      <td>{{ $author->gradeAsString() }}</td>
+    </tr>
+  </tpl>
+</table>

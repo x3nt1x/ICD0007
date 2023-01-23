@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RAAMATUD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id='{{ $page }}'>
+<header>
+    <nav>
+        <a href="?cmd=book-list" id="book-list-link">RAAMATUD</a>
+        <a href="?cmd=book-add" id="book-form-link">LISA RAAMAT</a>
+        <a href="?cmd=author-list" id="author-list-link">AUTORID</a>
+        <a href="?cmd=author-add" id="author-form-link">LISA AUTOR</a>
+    </nav>
+</header>
+
+<main tpl-include="{{ $content }}"></main>
+
+<footer>
+    ICD0007 Näidisrakendus
+</footer>
+</body>
+</html>

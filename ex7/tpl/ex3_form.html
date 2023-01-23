@@ -1,0 +1,13 @@
+<div tpl-if="$error">
+    <span>{{ $error }}</span>
+</div>
+
+<form method="post" action="ex3.php">
+
+    <input type="hidden" name="cmd" value="{{ $cmd }}">
+
+    <input name="temperature" value="{{ $temperature ?? '' }}">
+
+    <input type="submit" name="calculateButton" value="Calculate"/>
+
+</form>

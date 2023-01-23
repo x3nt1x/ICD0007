@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<div id="result-div" style="display: none">
+    Result: <span id="result"></span>
+</div>
+
+<button id="b1">Say Hello</button>
+
+<script>
+
+    document.getElementById('b1').onclick = function ()
+    {
+        document.getElementById('result-div').style.display = 'block';
+        document.getElementById('result').textContent = "Hello";
+    };
+
+</script>
+
+</body>
+</html>

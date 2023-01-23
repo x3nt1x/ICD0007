@@ -1,0 +1,42 @@
+<div tpl-if="$error" id='error-block'>
+  {{ $error }}
+</div>
+
+<form method="POST" action="?cmd=author-add-submit">
+  <input name="id" type="hidden" value='{{ $id }}'>
+
+  <div class="label">
+    <label for="eesnimi">Eesnimi: </label>
+  </div>
+
+  <div class="input">
+    <input type="text" name="firstName" id="eesnimi" value='{{ $firstName }}'>
+  </div>
+
+  <div class="label">
+    <label for="perkonnanimi">Perkonnanimi: </label>
+  </div>
+
+  <div class="input">
+    <input type="text" name="lastName" id="perkonnanimi" value='{{ $lastName }}'>
+  </div>
+
+  <div class="label">
+    <label>Hinne: </label>
+  </div>
+
+  <div class="input">
+    <tpl tpl-foreach="range(1, 5) as $i" tpl-trim-contents>
+      <label id='radio'><input type='radio' name='grade' value='{{ $i }}' tpl-checked='$i === $grade'> {{ $i }}</label>
+    </tpl>
+  </div>
+
+  <div class="label">
+    <label></label>
+  </div>
+
+  <div class="button">
+    <input type='submit' name='deleteButton' value='Kustuta' id='delete' tpl-if='$id'>
+    <input type="submit" name="submitButton" value="Salvesta">
+  </div>
+</form>

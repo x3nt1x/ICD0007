@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+<script>
+
+    const numbers = [1, 2, '3', 6, 2, 3, 2, 3];
+
+    console.log(isInList(numbers, 2));
+
+    function isInList(haystack, needle)
+    {
+        return !!haystack.find(number => number === needle);
+
+        /*
+        for (let number of haystack)
+        {
+            if (number === needle)
+                return true;
+        }
+
+        return false;
+        */
+    }
+
+</script>
+</body>
+</html>

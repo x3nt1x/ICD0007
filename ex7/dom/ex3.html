@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<div>
+    <div data-color="red">1</div>
+    <div>
+        <div data-color="blue">2</div>
+        <div>
+            <div data-color="red">3</div>
+        </div>
+    </div>
+    <div data-color="green">4</div>
+</div>
+
+<script>
+
+    for (const element of document.querySelectorAll("div[data-color]"))
+        element.style.color = element.getAttribute("data-color")
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+<script>
+
+    const personList = [
+        { name: 'Bob', phones: ['123', '321'] },
+        { name: 'Xyz', phones: ['456', '123'] },
+        { name: 'Abc', phones: ['789', '987'] }
+    ];
+
+    function findPersonsByPhoneNumber(personList, phoneToBeFound)
+    {
+        return personList.filter(person => person.phones.find(phone => phone === phoneToBeFound));
+    }
+
+    console.log(findPersonsByPhoneNumber(personList, '123'));
+
+</script>
+</body>
+</html>

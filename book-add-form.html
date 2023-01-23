@@ -1,0 +1,70 @@
+<div tpl-if="$error" id='error-block'>
+    {{ $error }}
+</div>
+
+<form method="POST" action="?cmd=book-add-submit">
+    <input name="id" type="hidden" value='{{ $id }}'>
+
+    <div class="label">
+        <label for="pealkiri">Pealkiri: </label>
+    </div>
+
+    <div class="input">
+        <input type='text' id='pealkiri' name='title' value='{{ $title }}'>
+    </div>
+
+    <div class="label">
+        <label for="autor1">Autor 1: </label>
+    </div>
+
+    <div class="input">
+        <select id="autor1" name="author1">
+            <option value=""></option>
+
+            <tpl tpl-foreach="$allAuthors as $author">
+                <option value='{{ $author->id }}' tpl-selected='$author->id === $authors[0]'>{{ $author->getFullName() }}</option>
+            </tpl>
+        </select>
+    </div>
+
+    <div class="label">
+        <label for="autor2">Autor 2: </label>
+    </div>
+
+    <div class="input">
+        <select id="autor2" name="author2">
+            <option value=""></option>
+
+            <tpl tpl-foreach="$allAuthors as $author">
+                <option value='{{ $author->id }}' tpl-selected='$author->id === $authors[1]'>{{ $author->getFullName() }}</option>
+            </tpl>
+        </select>
+    </div>
+
+    <div class="label">
+        <label>Hinne: </label>
+    </div>
+
+    <div class="input">
+        <tpl tpl-foreach="range(1, 5) as $i" tpl-trim-contents>
+            <label id='radio'><input type='radio' name='grade' value='{{ $i }}' tpl-checked='$i === $grade'> {{ $i }}</label>
+        </tpl>
+    </div>
+
+    <div class="label">
+        <label for="loetud">Loetud: </label>
+    </div>
+
+    <div class="input">
+        <input type="checkbox" name="isRead" id="loetud" tpl-checked="$isRead">
+    </div>
+
+    <div class="label">
+        <label></label>
+    </div>
+
+    <div class="button">
+        <input type='submit' name='deleteButton' value='Kustuta' id='delete' tpl-if='$id'>
+        <input type="submit" name="submitButton" value="Salvesta">
+    </div>
+</form>
